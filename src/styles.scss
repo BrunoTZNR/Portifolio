@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-light: #f4f4f4;
+  --text-dark: #141414;
+  --bg-light: #cfcfcf;
+  --bg-light-secondary: #b1b1b1;
+  --bg-dark: #272727;
+  --bg-dark-secondary: #333333;
+}
+
+@media  (prefers-color-scheme: dark) {
+  body {
+    --bg-color: var(--bg-dark);
+    --bg-color-secondary: var(--bg-dark-secondary);
+    --text-color: var(--text-light);
+  }
+}
+
+@media  (prefers-color-scheme: light) {
+  body {
+    --bg-color: var(--bg-light);
+    --bg-color-secondary: var(--bg-light-secondary);
+    --text-color: var(--text-dark);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100dvw;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  font-family: 'kanit', arial;
+  color: var(--text-color);
+}
+
+a {
+  display: block;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+li {
+  list-style: none;
+}
