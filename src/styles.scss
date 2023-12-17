@@ -11,7 +11,11 @@
   body {
     --bg-color: var(--bg-dark);
     --bg-color-secondary: var(--bg-dark-secondary);
+    --bg-image: var(--bg-image-dark);
     --text-color: var(--text-light);
+
+    // background: url('assets/svg/bg-dark.svg');
+    // backdrop-filter: blur(4px);
   }
 }
 
@@ -20,6 +24,9 @@
     --bg-color: var(--bg-light);
     --bg-color-secondary: var(--bg-light-secondary);
     --text-color: var(--text-dark);
+
+    // background: url('assets/svg/bg-light.svg');
+    // backdrop-filter: blur(4px);
   }
 }
 
@@ -27,6 +34,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  // outline: 1px solid red;
 }
 
 html {
@@ -43,9 +52,14 @@ img {
   display: block;
 }
 
-h1 {
-  font-family: 'kanit', arial;
+h1, h2, h4 {
+  font-family: 'kanit', Arial;
   color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+  font-family: 'ubuntu', Arial;
 }
 
 a {
@@ -53,6 +67,25 @@ a {
   font-family: Arial, sans-serif;
   text-decoration: none;
   color: var(--text-color);
+  font-family: 'ubuntu', Arial;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: background-color .2s ease-in;
+  padding: .5rem .75rem;
+
+  &:hover {
+    background-color: var(--bg-color-secondary);
+  }
 }
 
 li {
