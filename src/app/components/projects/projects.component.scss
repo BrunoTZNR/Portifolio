@@ -1,0 +1,125 @@
+.projects-container {
+  max-width: 1100px;
+  padding: 5rem .75rem;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 auto;
+    width: 45%;
+    border-bottom: 3px solid var(--text-color);
+    margin-bottom: 3rem;
+  }
+}
+
+.projects-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  max-height: 450px;
+  margin-bottom: 3rem;
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+
+    .img {
+      display: block;
+      width: 600px;
+      height: 350px;
+      background-color: var(--bg-color-secondary);
+      content: '';
+    }
+
+    .projects-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: var(--text-color);
+        flex-grow: 2;
+        border-radius: .5rem;
+        transition: background-color .2s ease-in;
+
+        svg {
+          width: 25px;
+
+          path {
+            fill: var(--bg-color);
+            transition: fill .2s ease-in;
+          }
+        }
+
+        &:hover {
+          background-color: var(--bg-color-secondary);
+
+          svg {
+            path {
+              fill: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-about {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.5rem;
+
+    .project-content {
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: var(--text-color);
+        text-indent: 1.5rem;
+        font-size: 1.1rem;
+        text-align: justify;
+        font-weight: 300;
+      }
+    }
+
+    .project-stacks {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: .5rem;
+      align-items: center;
+
+      h4 {
+        width: 20%;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--text-color);
+      }
+
+      .stacks-wrapper {
+        display: flex;
+        gap: .25rem;
+
+        .stacks-icon {
+          svg {
+            width: 40px;
+            padding: .15rem;
+            background-color: var(--text-color);
+
+            path {
+              fill: var(--bg-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
