@@ -2,6 +2,9 @@
   max-width: 1100px;
   padding: 5rem .75rem;
   margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
   h2 {
     text-align: center;
@@ -13,7 +16,132 @@
   }
 }
 
-.projects-wrapper {
+.project-card {
+  display: flex;
+  gap: 1rem;
+  height: 400px;
+  width: 800px;
+
+  padding: .5rem;
+  background-color: var(--bg-color-secondary);
+  border-radius: 1rem;
+
+  &:nth-child(even) {
+    .project-img {
+      order: 2;
+    }
+  }
+}
+
+.project-img {
+  height: 100%;
+  width: 55%;
+  display: grid;
+  align-items: center;
+
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.project-about {
+  width: 45%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+}
+
+.project-content {
+  text-align: center;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: .75rem;
+  }
+
+  p {
+    max-width: 85%;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    margin: 0 auto;
+  }
+}
+
+.stacks-container {
+  h4 {
+    width: 80px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    border-bottom: 3px solid var(--text-color);
+  }
+
+  .stacks-wrapper {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+
+    .stacks-icon {
+      svg {
+        width: 45px;
+        padding: .15rem;
+        border-radius: .25rem;
+        background-color: var(--text-color);
+
+        path {
+          fill: var(--bg-color);
+        }
+      }
+    }
+  }
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  height: 44px;
+
+  a {
+    height: 100%;
+    flex-grow: 2;
+    border-radius: .75rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.25rem 0 1.5rem;
+    background-color: var(--bg-color);
+    transition: all .2s ease-in;
+    font-size: 1.05rem;
+
+    svg {
+      width: 24px;
+      rect { fill: var(--text-color); transition: fill .2s ease-in; }
+      path { fill: var(--bg-color); transition: fill .2s ease-in; }
+    }
+
+    &:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+
+      svg {
+        rect { fill: var(--bg-color); }
+        path { fill: var(--text-color); }
+      }
+    }
+  }
+}
+
+
+
+
+/*.projects-wrapper {
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -122,4 +250,4 @@
       }
     }
   }
-}
+}*/
