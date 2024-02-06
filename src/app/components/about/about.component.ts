@@ -5,9 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
-
-  ngOnInit(): void {
-
-  }
+export class AboutComponent {
+  date = new Date();
+  years = new Date().getFullYear() - 2003;
 }
